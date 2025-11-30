@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Pacientes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Cadastro e Consulta de Pacientes</h1>
+
+      <section class="form-section">
+        <h2>Adicionar Paciente</h2>
+        <form id="paciente-form">
+          <label for="paciente-nome">Nome do paciente:</label>
+          <input
+            type="text"
+            id="paciente-nome"
+            placeholder="Digite o nome do paciente"
+            required
+          />
+
+          <label for="paciente-cpf">CPF:</label>
+          <input
+            type="text"
+            id="paciente-cpf"
+            placeholder="Digite o CPF do paciente"
+            maxlength="11"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            required
+          />
+
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+
+      <section class="lista-section">
+        <h2>Lista de Pacientes</h2>
+        <ul id="paciente-list">
+          <!-- Lista gerada dinamicamente pelo JS -->
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
